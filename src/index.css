@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper {
+  perspective: 1000px; /* Adding perspective for better transformation */
+}
+
+.homepagecontainerbox {
+  transform-style: preserve-3d; /* Preserve the 3D transformations */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for transform property */
+}
+
+.hover\:scale-top:hover {
+  transform: scaleY(1.1); /* Scale only the Y-axis (top) when hovered */
+}
+
+* {
+  cursor: none;
+}
+
+/* Apply the custom rounded cursor image */
+* {
+  cursor: url("./assets/mousepointer.png") 0 0, auto;
+}
+
+a:hover {
+  cursor: url("./assets/mousepointer.png") 3 3, auto;
+  text-decoration: none;
+}
+
+a {
+  cursor: url("./assets/mousepointer.png") 3 3, auto;
+}
+
+.my-animation {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter, display;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 150ms;
+  transition-duration: 300ms;
+}
+
+/* Home.css */
+.animation-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.moving-content {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  white-space: nowrap;
+  animation: moveRightToLeft 20s linear infinite;
+}
+
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@media (min-width: 0px) and (max-width: 576px) {
+  #navbar-main-2{
+    display: flex;
+  }
+  #navbar-main-1{
+    display: none;
+  }
+  #navbar-sub-2{
+    display: flex;
+  }
+  #navbar-sub-1{
+    display: none;
+  }
+}
+
+@media (min-width: 577px) {
+  #navbar-main-2{
+    display: none;
+  }
+  #navbar-main-1{
+    display: flex;
+  }
+  #navbar-sub-2{
+    display: none;
+  }
+  #navbar-sub-1{
+    display: flex;
+  }
+}
+
+
+
+#lineh1{
+  position: absolute;
+  left: 0;
+  height: 10px;
+  background: #5500AA;
+  animation: lineH 4s 5s infinite linear;
+}
+#lineh2{
+  position: absolute;
+  left: 0;
+  top: 40px;
+  height: 10px;
+  background: #AA2B00;
+  animation: lineH 5s 0.5s infinite linear;
+}
+#lineh3{
+  position: absolute;
+  left: 0;
+  top: 70px;
+  height: 10px;
+  background: #00D4FF;
+  animation: lineH 5s 2s infinite linear;
+}
+#lineh4{
+  position: absolute;
+  right: 0;
+  top: 100px;
+  height: 10px;
+  background: #00AA2B;
+  animation: lineH 5s 1s infinite linear;
+}
+#lineh5{
+  position: absolute;
+  left: 0;
+  top: 130px;
+  height: 10px;
+  background: #AA8000;
+  animation: lineH 5s 4s infinite linear;
+}
+#lineh6{
+  position: absolute;
+  right: 0;
+  top: 160px;
+  height: 10px;
+  background: #AAFF00;
+  animation: lineH 4s 1s infinite linear;
+}
+#lineh7{
+  position: absolute;
+  right: 0;
+  top: 190px;
+  height: 10px;
+  background: #D50055;
+  animation: lineH 4s 0s infinite linear;
+}
+#lineh8{
+  position: absolute;
+  left: 0;
+  top: 220px;
+  height: 10px;
+  background: #00FFFF;
+  animation: lineH 4s 1.5s infinite linear;
+}
+#lineh9{
+  position: absolute;
+  left: 0;
+  top: 250px;
+  height: 10px;
+  background: #2B002B;
+  animation: lineH 5s 2s infinite linear;
+}
+#lineh10{
+  position: absolute;
+  right: 0;
+  top: 280px;
+  height: 10px;
+  background: #005580;
+  animation: lineH 4s 3s infinite linear;
+}
+#lineh11{
+  position: absolute;
+  right: 0;
+  top: 310px;
+  height: 10px;
+  background: #FF557F;
+  animation: lineH 4s 1s infinite linear;
+}
+#lineh12{
+  position: absolute;
+  right: 0;
+  top: 340px;
+  height: 10px;
+  background: #85B085;
+  animation: lineH 6s 1s infinite linear;
+}
+
+
+@keyframes lineH{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 95%;opacity: 0;
+  }
+}
